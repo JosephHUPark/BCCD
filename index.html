@@ -3,55 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BCCDVT - Home</title>
+    <title>BCCD - Home</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic navbar styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #2a6a92;
+            overflow: hidden;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar > ul {
+            display: flex;
+        }
+
+        .navbar li {
+            position: relative;
+        }
+
+        .navbar > ul > li {
+            padding: 15px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .navbar > ul > li:hover {
+            background-color: #1b4f70;
+        }
+
+        /* Submenu styling */
+        .navbar li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1b4f70;
+            min-width: 200px;
+            z-index: 1;
+        }
+
+        .navbar li:hover ul {
+            display: block;
+        }
+
+        .navbar li ul li {
+            padding: 10px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .navbar li ul li:hover {
+            background-color: #14506a;
+        }
+
+        .navbar li ul li ul {
+            top: 0;
+            left: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Bennington County Conservation District</h1>
-        <nav>
+        <nav class="navbar">
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li>Home</li>
+                <li>Grants
+                    <ul>
+                        <li>State Grants</li>
+                        <li>Work Grants</li>
+                        <li>Local Funding and Support</li>
+                        <li>Funding Updates (from newsletter)</li>
+                        <li>Funding Accomplishments</li>
+                    </ul>
+                </li>
+                <li>Get Involved
+                    <ul>
+                        <li>Volunteer</li>
+                        <li>Donate</li>
+                        <li>Events
+                            <ul>
+                                <li>Community Resilience Symposiums</li>
+                                <li>Annual Community Resilience Forum</li>
+                            </ul>
+                        </li>
+                        <li>Education
+                            <ul>
+                                <li>Workshops</li>
+                            </ul>
+                        </li>
+                        <li>Environmental Notice Bulletin</li>
+                    </ul>
+                </li>
+                <li>Resources
+                    <ul>
+                        <li>Water
+                            <ul>
+                                <li>Disaster Mitigation</li>
+                                <li>Water Quality</li>
+                            </ul>
+                        </li>
+                        <li>Agriculture
+                            <ul>
+                                <li>Hickory Harvest</li>
+                                <li>Chestnut Giveaway</li>
+                                <li>Guides</li>
+                            </ul>
+                        </li>
+                        <li>Land</li>
+                        <li>Conservation
+                            <ul>
+                                <li>Wetlands</li>
+                                <li>Wildlife</li>
+                            </ul>
+                        </li>
+                        <li>Technology
+                            <ul>
+                                <li>Vermont Ripsower</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>News & Calendar
+                    <ul>
+                        <li>News</li>
+                        <li>Mailing List</li>
+                        <li>Events Calendar</li>
+                        <li>Environmental Notice Bulletin</li>
+                    </ul>
+                </li>
+                <li>About Us
+                    <ul>
+                        <li>Organization Members</li>
+                        <li>Board Meetings</li>
+                        <li>Partners</li>
+                    </ul>
+                </li>
+                <li>Contact Us</li>
+                <li>Emergency Response
+                    <ul>
+                        <li>Flood Reporting</li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
-
-    <main>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Welcome to the Bennington County Conservation District. We strive to promote sustainable land use, water conservation, and community engagement.</p>
-        </section>
-        
-        <section id="projects">
-            <h2>Our Projects</h2>
-            <ul>
-                <li>Water Quality Monitoring</li>
-                <li>Land Conservation Programs</li>
-                <li>Educational Outreach</li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Bennington County Conservation District. All rights reserved.</p>
-    </footer>
 </body>
 </html>
