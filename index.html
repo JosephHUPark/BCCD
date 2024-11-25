@@ -53,55 +53,64 @@
         }
 
         nav ul li a:hover {
-            background-color: white;
-            color: #09522f;
+            background-color: rgb(3, 3, 3);
             border-radius: 5px;
         }
 
         nav ul li .dropdown-menu {
             display: none;
             position: absolute;
-            top: 40px;
+            top: 100%;
             left: 0;
             background-color: white;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
             z-index: 1000;
-            min-width: 150px;
+            min-width: 200px;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        nav ul li:hover .dropdown-menu {
+            display: flex;
+            background-color: rgb(33, 33, 33    );
+            border-radius: 5px;
+        }
+
+        nav ul li .dropdown-menu li {
+            position: relative;
+            width: 100%;
         }
 
         nav ul li .dropdown-menu a {
             display: block;
             padding: 10px 20px;
-            color: #09522f;
+            color: #ffffff;
             text-decoration: none;
             font-size: 14px;
             transition: background-color 0.3s ease;
         }
 
         nav ul li .dropdown-menu a:hover {
-            background-color: #f4f4f4;
+            background-color: rgb(33, 33, 33);
+            border-radius: 5px;
         }
 
-        nav ul li:hover .dropdown-menu {
-            display: block;
-        }
-
-        /* Styles for nested dropdowns */
         nav ul li .dropdown-menu .nested-dropdown-menu {
             display: none;
             position: absolute;
             top: 0;
-            left: 100%; /* Position it to the right of its parent */
-            background-color: white;
+            left: 100%;
+            background-color: rgb(33, 33, 33);
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
             z-index: 1000;
-            min-width: 150px;
+            min-width: 200px;
+            flex-direction: column;
         }
 
         nav ul li .dropdown-menu li:hover .nested-dropdown-menu {
-            display: block;
+            display: flex;
         }
 
         .hero {
@@ -122,19 +131,19 @@
             <li><a href="#">Home</a></li>
             <li>
                 <a href="#">Grants ▼</a>
-                <div class="dropdown-menu">
-                    <a href="#">State Grants</a>
-                    <a href="#">Work Grants</a>
-                    <a href="#">Local Funding and Support</a>
-                    <a href="#">Funding Updates</a>
-                    <a href="#">Funding Accomplishments</a>
-                </div>
+                <ul class="dropdown-menu">
+                    <li><a href="#">State Grants</a></li>
+                    <li><a href="#">Work Grants</a></li>
+                    <li><a href="#">Local Funding and Support</a></li>
+                    <li><a href="#">Funding Updates</a></li>
+                    <li><a href="#">Funding Accomplishments</a></li>
+                </ul>
             </li>
             <li>
                 <a href="#">Get Involved ▼</a>
-                <div class="dropdown-menu">
-                    <a href="#">Volunteer</a>
-                    <a href="#">Donate</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Donate</a></li>
                     <li>
                         <a href="#">Events ▼</a>
                         <ul class="nested-dropdown-menu">
@@ -148,44 +157,66 @@
                             <li><a href="#">Workshops</a></li>
                         </ul>
                     </li>
-                    <a href="#">Environmental Notice Bulletin</a>
-                </div>
+                    <li><a href="#">Environmental Notice Bulletin</a></li>
+                </ul>
             </li>
             <li>
                 <a href="#">Resources ▼</a>
-                <div class="dropdown-menu">
-                    <a href="#">Water</a>
-                    <a href="#">Agriculture</a>
-                    <a href="#">Land</a>
-                    <a href="#">Conservation</a>
-                    <a href="#">Technology</a>
-                </div>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="#">Water ▼</a>
+                        <ul class="nested-dropdown-menu">
+                            <li><a href="#">Disaster Mitigation</a></li>
+                            <li><a href="#">Water Quality</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Agriculture ▼</a>
+                        <ul class="nested-dropdown-menu">
+                            <li><a href="#">Hickory Harvest</a></li>
+                            <li><a href="#">Chestnut Giveaway</a></li>
+                            <li><a href="#">Guides</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Land</a></li>
+                    <li>
+                        <a href="#">Conservation ▼</a>
+                        <ul class="nested-dropdown-menu">
+                            <li><a href="#">Wetlands</a></li>
+                            <li><a href="#">Wildlife</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Technology ▼</a>
+                        <ul class="nested-dropdown-menu">
+                            <li><a href="#">Vermont Ripsower</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </li>
             <li>
                 <a href="#">News & Events ▼</a>
-                <div class="dropdown-menu">
-                    <a href="#">News</a>
-                    <a href="#">Mailing List</a>
-                    <a href="#">Events Calendar</a>
-                    <a href="#">Environmental Notice Bulletin</a>
-                </div>
+                <ul class="dropdown-menu">
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Mailing List</a></li>
+                    <li><a href="#">Events Calendar</a></li>
+                    <li><a href="#">Environmental Notice Bulletin</a></li>
+                </ul>
             </li>
             <li>
                 <a href="#">About Us ▼</a>
-                <div class="dropdown-menu">
-                    <a href="#">Organization Members</a>
-                    <a href="#">Board Meetings</a>
-                    <a href="#">Partners</a>
-                </div>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Organization Members</a></li>
+                    <li><a href="#">Board Meetings</a></li>
+                    <li><a href="#">Partners</a></li>
+                </ul>
             </li>
-            <li>
-                <a href="#">Contact Us</a>
-            </li>
+            <li><a href="#">Contact Us</a></li>
             <li>
                 <a href="#">Emergency Response ▼</a>
-                <div class="dropdown-menu">
-                    <a href="#">Flood Reporting</a>
-                </div>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Flood Reporting</a></li>
+                </ul>
             </li>
         </ul>
     </nav>
